@@ -34,7 +34,7 @@ def banner():
  \___ \ \  ___/\  ___/ |    < \  ___/ |  | \/
 /____  > \___  >\___  >|__|_ \ \___  >|__|
 	 \/      \/     \/      \/     \/        ''' + W)
-	print ('\n' + G + '[>]' + C + ' Created By : ' + W + 'thewhiteh4t')
+	print ('\n' + G + '[>]' + C + ' Rewrited by : ' + W + 'Eclipz-')
 	print (G + '[>]' + C + ' Version    : ' + W + ver + '\n')
 
 def network():
