@@ -48,25 +48,10 @@ def network():
 
 def version():
 	print (G + '[+]' + C + ' Checking For Seeker Updates...' + W, end='')
-	update = requests.get('https://raw.githubusercontent.com/thewhiteh4t/seeker/master/version.txt', timeout = 5)
+	update = requests.get('', timeout = 5)
 	update = update.text.split(' ')[1]
 	update = update.strip()
-
-	if update != ver:
-		print ('\n\n' + G + '[!]' + C + ' A New Version is Available : ' + W + update)
-		ans = raw_input('\n' + G + '[!]' + C + ' Update ? [y/n] : ' + W)
-		if ans == 'y':
-			print ('\n' + G + '[+]' + C + ' Updating...' + W + '\n')
-			subp.check_output(['git', 'reset', '--hard', 'origin/master'])
-			subp.check_output(['git', 'pull'])
-			print ('\n' + G + '[+]' + C + ' Script Updated...Please Execute Again...')
-			sys.exit()
-		elif ans == 'n':
-			pass
-		else:
-			print ('\n' + R + '[-]' + C + ' Invalid Character...Skipping...'+ W)
-	else:
-		print (G + ' Up-to-date' + W)
+	
 
 def ngrok():
 	global api, site, swd
